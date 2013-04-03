@@ -25,4 +25,11 @@ class ArticlesController < ApplicationController
   def edit
     @article = Article.find(params[:id])
   end
+
+  def update
+    @article = Article.find(params[:id])
+    @article.update_attributes(params[:article])
+
+    redirect_to article_url(@article)
+  end
 end
