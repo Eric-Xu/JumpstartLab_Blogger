@@ -41,4 +41,5 @@ class ArticlesController < ApplicationController
 
     redirect_to article_url(@article)
   end
+
 end
